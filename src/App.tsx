@@ -1,19 +1,29 @@
-import React from 'react';
-import { ThemeProvider } from './lib/theme/ThemeContext';
-import Navbar from './components/Navbar';
+import type React from "react";
+import { Suspense, lazy } from "react";
+import { ThemeProvider } from "./lib/theme/ThemeContext"; // Adjust the path
 
-function App() {
+// Lazy load components
+const HelloWorld = lazy(() => import("./components/HelloWorld"));
+const Navbar = lazy(() => import("./components/Navbar"));
+
+const App: React.FC = () => {
   return (
     <ThemeProvider>
-      <div className="min-h-screen transition-colors duration-200">
+      {/* Suspense to handle the loading state for lazy-loaded components */}
+      <Suspense fallback={<div>Loading...</div>}>
         <Navbar />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <h1 className="text-2xl font-bold">Welcome to Your App</h1>
-          <p className="mt-4">Start editing to see some magic happen!</p>
+        <div
+          style={{
+            minHeight: "100vh",
+            padding: "2rem",
+            backgroundColor: "var(--background)",
+          }}
+        >
+          <HelloWorld />
         </div>
-      </div>
+      </Suspense>
     </ThemeProvider>
   );
-}
+};
 
 export default App;

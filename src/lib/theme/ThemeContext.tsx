@@ -1,6 +1,8 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import type React from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 
 export type Theme = {
+  mode: string;
   name: string;
   colors: {
     primary: string;
@@ -44,6 +46,7 @@ export const themes: Record<string, Theme> = {
       text: '#1f2937',
     },
     palette: ['#4F46E5', '#EC4899', '#10B981', '#F59E0B'],
+    mode: ''
   },
   dark: {
     name: 'dark',
@@ -59,6 +62,77 @@ export const themes: Record<string, Theme> = {
       text: '#A6ADBB',
     },
     palette: ['#818CF8', '#F472B6', '#34D399', '#3B82F6'],
+    mode: ''
+  },
+  blue: {
+    name: 'blue',
+    colors: {
+      primary: '#1E3A8A',
+      secondary: '#60A5FA',
+      accent: '#93C5FD',
+      neutral: '#1E293B',
+      'base-100': '#F0F9FF',
+      background: '#E0F2FE',
+      text: '#0F172A',
+    },
+    palette: ['#1E3A8A', '#60A5FA', '#93C5FD', '#E0F2FE'],
+    mode: ''
+  },
+  green: {
+    name: 'green',
+    colors: {
+      primary: '#065F46',
+      secondary: '#34D399',
+      accent: '#D1FAE5',
+      neutral: '#14532D',
+      'base-100': '#F0FDF4',
+      background: '#DCFCE7',
+      text: '#064E3B',
+    },
+    palette: ['#065F46', '#34D399', '#D1FAE5', '#DCFCE7'],
+    mode: ''
+  },
+  orange: {
+    name: 'orange',
+    colors: {
+      primary: '#FF8C00',
+      secondary: '#FFA500',
+      accent: '#FFD580',
+      neutral: '#7A3C00',
+      'base-100': '#FFF5E5',
+      background: '#FFEDCC',
+      text: '#662900',
+    },
+    palette: ['#FF8C00', '#FFA500', '#FFD580', '#FFEDCC'],
+    mode: ''
+  },
+  red: {
+    name: 'red',
+    colors: {
+      primary: '#B91C1C',
+      secondary: '#F87171',
+      accent: '#FCA5A5',
+      neutral: '#7F1D1D',
+      'base-100': '#FEF2F2',
+      background: '#FEE2E2',
+      text: '#7F1D1D',
+    },
+    palette: ['#B91C1C', '#F87171', '#FCA5A5', '#FEE2E2'],
+    mode: ''
+  },
+  gray: {
+    name: 'gray',
+    colors: {
+      primary: '#374151',
+      secondary: '#9CA3AF',
+      accent: '#D1D5DB',
+      neutral: '#111827',
+      'base-100': '#F9FAFB',
+      background: '#E5E7EB',
+      text: '#1F2937',
+    },
+    palette: ['#374151', '#9CA3AF', '#D1D5DB', '#E5E7EB'],
+    mode: ''
   },
   cupcake: {
     name: 'cupcake',
@@ -74,6 +148,7 @@ export const themes: Record<string, Theme> = {
       text: '#291334',
     },
     palette: ['#65c3c8', '#ef9fbc', '#eeaf3a', '#291334'],
+    mode: ''
   },
   synthwave: {
     name: 'synthwave',
@@ -91,6 +166,7 @@ export const themes: Record<string, Theme> = {
       error: '#ec8c78',
     },
     palette: ['#e779c1', '#58c7f3', '#f9c80e', '#ec8c78'],
+    mode: ''
   },
   retro: {
     name: 'retro',
@@ -106,6 +182,7 @@ export const themes: Record<string, Theme> = {
       text: '#282425',
     },
     palette: ['#ef9995', '#a4cbb4', '#DC8850', '#2E282A'],
+    mode: ''
   },
   cyberpunk: {
     name: 'cyberpunk',
@@ -119,6 +196,7 @@ export const themes: Record<string, Theme> = {
       text: '#FFFFFF',
     },
     palette: ['#FF00FF', '#00FFFF', '#F9C80E', '#FF3864'],
+    mode: ''
   },
   valentine: {
     name: 'valentine',
@@ -132,6 +210,7 @@ export const themes: Record<string, Theme> = {
       text: '#632c3b',
     },
     palette: ['#e96d7b', '#a991f7', '#66b1b3', '#af4670'],
+    mode: ''
   },
   aqua: {
     name: 'aqua',
@@ -146,6 +225,7 @@ export const themes: Record<string, Theme> = {
       text: '#ffffff',
     },
     palette: ['#09ecf3', '#966fb3', '#ffe999', '#3b8ac4'],
+    mode: ''
   },
   garden: {
     name: 'garden',
@@ -159,6 +239,7 @@ export const themes: Record<string, Theme> = {
       text: '#100f0f',
     },
     palette: ['#5c7f67', '#8E4162', '#5c7f67', '#291E00'],
+    mode: ''
   },
   forest: {
     name: 'forest',
@@ -172,6 +253,7 @@ export const themes: Record<string, Theme> = {
       text: '#ffffff',
     },
     palette: ['#1eb854', '#1DB88E', '#1DB8AB', '#19362D'],
+    mode: ''
   },
 };
 
