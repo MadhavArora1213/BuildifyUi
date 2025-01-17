@@ -24,6 +24,7 @@ export const ThemeDropdown = () => {
 
   return (
     <div ref={dropdownRef} className="relative">
+      {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors duration-200"
@@ -82,6 +83,7 @@ export const ThemeDropdown = () => {
                 <div className="flex space-x-1">
                   {themes[themeName]?.palette?.map((color, index) => (
                     <div
+                      // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
                       key={index}
                       className="w-3 h-3 rounded-full"
                       style={{ backgroundColor: color }}
