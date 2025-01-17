@@ -25,7 +25,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Left section */}
           <div className="flex items-center">
-            <Suspense fallback={<div className="w-6 h-6 animate-spin">☰</div>}>
+            <Suspense fallback={<div className="w-6 h-6">☰</div>}>
               {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
               <button className="p-2 rounded-lg hover:bg-opacity-10 transition-colors duration-200" style={{ backgroundColor: themeStyles.primaryBg }}>
                 <MenuIcon size={24} style={{ color: themeStyles.textColor }} />
@@ -53,7 +53,7 @@ const Navbar = () => {
             <a href="#" className="hover:opacity-80 transition-opacity duration-200" style={{ color: themeStyles.textColor }}>Components</a>
             <div className="flex items-center space-x-2">
               <ThemeDropdown />
-              <Suspense fallback={<div className="w-5 h-5 animate-spin">🔗</div>}>
+              <Suspense fallback={<div className="w-5 h-5">🔗</div>}>
                 {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
                 <button className="p-2 rounded-lg hover:bg-opacity-10 transition-colors duration-200" style={{ backgroundColor: themeStyles.primaryBg }}>
                   <GithubIcon size={20} style={{ color: themeStyles.textColor }} />
