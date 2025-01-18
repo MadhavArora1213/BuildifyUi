@@ -3,8 +3,8 @@ import { Suspense, lazy } from "react";
 import { ThemeProvider } from "./lib/theme/ThemeContext"; // Adjust the path
 
 // Lazy load components
-const HelloWorld = lazy(() => import("./components/HelloWorld"));
-const Navbar = lazy(() => import("./components/Navbar"));
+const HelloWorld = lazy(() => import("./components/core/HelloWorld"));
+const Navbar = lazy(() => import("./components/core/Navbar"));
 
 const App: React.FC = () => {
   return (

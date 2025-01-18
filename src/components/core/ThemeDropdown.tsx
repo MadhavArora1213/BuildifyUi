@@ -1,7 +1,7 @@
-import React, { useRef, useState, lazy, Suspense, useMemo } from "react";
-import { useTheme } from "../lib/theme/ThemeContext";
-import { useClickOutside } from "../lib/hooks/useClickOutside";
-import { themes } from "../lib/theme/ThemeContext";
+import React,{ useRef, useState, lazy, Suspense, useMemo } from "react";
+import { useTheme } from "../../lib/theme/ThemeContext";
+import { useClickOutside } from "../../lib/hooks/useClickOutside";
+import { themes } from "../../lib/theme/ThemeContext";
 
 // Lazy load icons
 const ChevronDown = lazy(() =>

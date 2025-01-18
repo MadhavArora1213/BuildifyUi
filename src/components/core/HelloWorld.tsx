@@ -1,4 +1,4 @@
-import { useTheme } from "../lib/theme/ThemeContext"; // Adjust the import path if needed
+import { useTheme } from "../../lib/theme/ThemeContext"; // Adjust the import path if needed
 
 const HelloWorld = () => {
   const { theme } = useTheme(); // Access the current theme

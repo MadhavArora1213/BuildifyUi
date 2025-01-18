@@ -1,6 +1,6 @@
 import type React from 'react';
 import { lazy, Suspense, useMemo } from 'react';
-import { useTheme } from '../lib/theme/ThemeContext';
+import { useTheme } from '../../lib/theme/ThemeContext';
 
 // Lazy load the Search icon for better performance
 const SearchIcon = lazy(() => import('lucide-react').then((module) => ({ default: module.Search })));
@@ -27,7 +27,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
     <div className={`relative w-full ${className}`}>
       {/* Search Icon - Lazy Loaded */}
       <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-        <Suspense fallback={<div className="w-5 h-5 animate-spin">🔍</div>}>
+        <Suspense fallback={<div className="w-5 h-5 ">🔍</div>}>
           <SearchIcon className="h-5 w-5" style={{ color: `${themeStyles.textColor}80` }} />
         </Suspense>
       </div>
