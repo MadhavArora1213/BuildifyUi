@@ -3,9 +3,11 @@ import { Suspense, lazy } from "react";
 import { ThemeProvider } from "./lib/theme/ThemeContext"; // Adjust the path
 import ButtonWrapper from "./registry/Components/Buttons/ButtonWrapper";
 
+
 // Lazy load components
 const HelloWorld = lazy(() => import("./components/core/HelloWorld"));
 const Navbar = lazy(() => import("./components/core/Navbar"));
+const GithubButton = lazy(() => import('./registry/Components/Buttons/GithubButton'));
 
 const App: React.FC = () => {
   return (
@@ -21,6 +23,7 @@ const App: React.FC = () => {
           }}
         >
           <ButtonWrapper/>
+          <GithubButton/>
         </div>
       </Suspense>
     </ThemeProvider>
