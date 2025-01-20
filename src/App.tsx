@@ -1,6 +1,7 @@
 import type React from "react";
 import { Suspense, lazy } from "react";
 import { ThemeProvider } from "./lib/theme/ThemeContext"; // Adjust the path
+import ButtonWrapper from "./registry/Components/Buttons/ButtonWrapper";
 
 // Lazy load components
 const HelloWorld = lazy(() => import("./components/core/HelloWorld"));
@@ -19,7 +20,7 @@ const App: React.FC = () => {
             backgroundColor: "var(--background)",
           }}
         >
-          <HelloWorld />
+          <ButtonWrapper/>
         </div>
       </Suspense>
     </ThemeProvider>
@@ -27,3 +28,5 @@ const App: React.FC = () => {
 };
 
 export default App;
+
+
