@@ -4,6 +4,7 @@ import { ThemeProvider } from "./lib/theme/ThemeContext"; // Adjust the path
 import ButtonWrapper from "./registry/Components/Buttons/ButtonWrapper";
 import Button from "./registry/Components/Buttons/Button";
 
+
 // Lazy load components
 
 const Navbar = lazy(() => import("./components/core/Navbar"));
@@ -16,7 +17,10 @@ const AnimatedButton = lazy(() => import('./registry/Components/Buttons/Animated
 const PlayNowButton = lazy(()=> import("./registry/Components/Buttons/PlayNowButton"));
 const JoinNowButton = lazy(()=> import("./registry/Components/Buttons/JoinNowButton"));
 const SentButton = lazy(()=> import("./registry/Components/Buttons/SentButton"));
-
+const AiButton = lazy(()=> import("./registry/Components/Buttons/AiButton"));
+const SvgButton = lazy(()=> import("./registry/Components/Buttons/SvgButton"));
+const InstructionButton = lazy(()=> import("./registry/Components/Buttons/InstructionButton"));
+const BallButton = lazy(()=> import("./registry/Components/Buttons/BallButton"));
 const App: React.FC = () => {
   return (
     <ThemeProvider>
@@ -40,6 +44,10 @@ const App: React.FC = () => {
           <PlayNowButton/>
           <JoinNowButton/>
           <SentButton/>
+          <AiButton/>
+          <SvgButton/>
+          <InstructionButton/>
+          <BallButton/>
         </div>
       </Suspense>
     </ThemeProvider>
