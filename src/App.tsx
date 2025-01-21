@@ -2,9 +2,6 @@ import type React from "react";
 import { Suspense, lazy } from "react";
 import { ThemeProvider } from "./lib/theme/ThemeContext"; // Adjust the path
 import ButtonWrapper from "./registry/Components/Buttons/ButtonWrapper";
-import Button from "./registry/Components/Buttons/Button";
-
-
 
 // Lazy load components
 const HelloWorld = lazy(() => import("./components/core/HelloWorld"));
@@ -12,6 +9,8 @@ const Navbar = lazy(() => import("./components/core/Navbar"));
 const GithubButton = lazy(() => import('./registry/Components/Buttons/GithubButton'));
 const KeyButton = lazy(() => import('./registry/Components/Buttons/KeyButton'));
 const LinkedButton = lazy(() => import('./registry/Components/Buttons/LinkedButton'));
+const ExploreButton = lazy(() => import("./registry/Components/Buttons/ExploreButton"));
+const FollowButton = lazy(() => import("./registry/Components/Buttons/FollowButton"));
 
 const App: React.FC = () => {
   return (
@@ -30,7 +29,8 @@ const App: React.FC = () => {
           <GithubButton/>
           <KeyButton/>
           <LinkedButton/>
-          <Button/>
+          <ExploreButton/>
+          <FollowButton/>
         </div>
       </Suspense>
     </ThemeProvider>

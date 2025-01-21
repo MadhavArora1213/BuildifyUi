@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Button = () => {
+const ExploreButton = () => {
   return (
     <StyledWrapper>
       <button>
@@ -44,4 +44,4 @@ const StyledWrapper = styled.div`
    box-shadow: none;
   }`;
 
-export default Button;
+export default ExploreButton;
