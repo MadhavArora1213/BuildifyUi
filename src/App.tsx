@@ -4,9 +4,8 @@ import { ThemeProvider } from "./lib/theme/ThemeContext"; // Adjust the path
 import ButtonWrapper from "./registry/Components/Buttons/ButtonWrapper";
 import Button from "./registry/Components/Buttons/Button";
 
-
 // Lazy load components
-const HelloWorld = lazy(() => import("./components/core/HelloWorld"));
+
 const Navbar = lazy(() => import("./components/core/Navbar"));
 const GithubButton = lazy(() => import('./registry/Components/Buttons/GithubButton'));
 const KeyButton = lazy(() => import('./registry/Components/Buttons/KeyButton'));
@@ -15,6 +14,8 @@ const ExploreButton = lazy(() => import("./registry/Components/Buttons/ExploreBu
 const FollowButton = lazy(() => import("./registry/Components/Buttons/FollowButton"));
 const AnimatedButton = lazy(() => import('./registry/Components/Buttons/AnimatedButton'));
 const PlayNowButton = lazy(()=> import("./registry/Components/Buttons/PlayNowButton"));
+const JoinNowButton = lazy(()=> import("./registry/Components/Buttons/JoinNowButton"));
+const SentButton = lazy(()=> import("./registry/Components/Buttons/SentButton"));
 
 const App: React.FC = () => {
   return (
@@ -37,6 +38,8 @@ const App: React.FC = () => {
           <FollowButton/>
           <AnimatedButton/>
           <PlayNowButton/>
+          <JoinNowButton/>
+          <SentButton/>
         </div>
       </Suspense>
     </ThemeProvider>
