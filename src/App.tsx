@@ -5,6 +5,7 @@ import ButtonWrapper from "./registry/Components/Buttons/ButtonWrapper";
 import Button from "./registry/Components/Buttons/Button";
 
 
+
 // Lazy load components
 
 const Navbar = lazy(() => import("./components/core/Navbar"));
@@ -21,6 +22,9 @@ const AiButton = lazy(()=> import("./registry/Components/Buttons/AiButton"));
 const SvgButton = lazy(()=> import("./registry/Components/Buttons/SvgButton"));
 const InstructionButton = lazy(()=> import("./registry/Components/Buttons/InstructionButton"));
 const BallButton = lazy(()=> import("./registry/Components/Buttons/BallButton"));
+const SmileButton = lazy(()=> import("./registry/Components/Buttons/SmileButton"));
+const DownloadButton = lazy(()=> import("./registry/Components/Buttons/DownloadButton"));
+// const PortalButton = lazy(()=> import("./registry/Components/Buttons/PortalButton"));
 const App: React.FC = () => {
   return (
     <ThemeProvider>
@@ -48,6 +52,9 @@ const App: React.FC = () => {
           <SvgButton/>
           <InstructionButton/>
           <BallButton/>
+          <SmileButton/>
+          <DownloadButton/>
+          {/* <PortalButton/> */}
         </div>
       </Suspense>
     </ThemeProvider>
