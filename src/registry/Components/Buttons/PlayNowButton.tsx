@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Button = () => {
+const PlayNowButton = () => {
   return (
     <StyledWrapper>
       <button>
@@ -75,4 +75,4 @@ const StyledWrapper = styled.div`
    width: 100%;
   }`;
 
-export default Button;
+export default PlayNowButton;
