@@ -3,7 +3,7 @@ import React, { Suspense, lazy } from "react";
 // Lazy load the SpotlightButton to optimize performance
 const SpotlightButton = lazy(() => import("./SpotlightButton"));
 
-const ButtonWrapper = () => {
+const ButtonWrapper: React.FC = () => {
   return (
     <div className="flex min-h-[300px] items-center justify-center px-4 ">
       <Suspense>
