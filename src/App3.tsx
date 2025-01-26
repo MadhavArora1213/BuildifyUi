@@ -7,6 +7,7 @@ import LoveToggle from "./registry/Components/ToggleSwitches/LoveToggle";
 import DownloadToggle from "./registry/Components/ToggleSwitches/DownloadToggle";
 import EmojiToggle from "./registry/Components/ToggleSwitches/EmojiToggle";
 import SwitchToggle from "./registry/Components/ToggleSwitches/SwitchToggle";
+import ThemeToggle from "./registry/Components/ToggleSwitches/ThemeToggle";
 const Navbar = lazy(() => import("./components/core/Navbar"));
 
 
@@ -22,6 +23,7 @@ const App3: React.FC = () => {
         <DownloadToggle />
         <EmojiToggle/>
         <SwitchToggle/>
+        <ThemeToggle/>
       </Suspense>
     </ThemeProvider>
   );
