@@ -9,6 +9,7 @@ import EmojiToggle from "./registry/Components/ToggleSwitches/EmojiToggle";
 import SwitchToggle from "./registry/Components/ToggleSwitches/SwitchToggle";
 import ThemeToggle from "./registry/Components/ToggleSwitches/ThemeToggle";
 import AirplaneToggle from "./registry/Components/ToggleSwitches/AirplaneToggle";
+import AiToggle from "./registry/Components/ToggleSwitches/AiToggle";
 const Navbar = lazy(() => import("./components/core/Navbar"));
 
 
@@ -26,6 +27,7 @@ const App3: React.FC = () => {
         <SwitchToggle/>
         <ThemeToggle/>
         <AirplaneToggle/>
+        <AiToggle/>
       </Suspense>
     </ThemeProvider>
   );
