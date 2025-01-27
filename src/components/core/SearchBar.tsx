@@ -2,6 +2,7 @@ import type React from 'react';
 import { lazy, Suspense, useMemo } from 'react';
 import { useTheme } from '../../lib/theme/ThemeContext';
 
+
 // Lazy load the Search icon for better performance
 const SearchIcon = lazy(() => import('lucide-react').then((module) => ({ default: module.Search })));
 
