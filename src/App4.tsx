@@ -5,6 +5,9 @@ import VehicleSelector from "./registry/Components/RadioButtons/VehicleSelector"
 import Star from "./registry/Components/RadioButtons/Star";
 import AnimatedStar from "./registry/Components/RadioButtons/AnimatedStar";
 import SwitchRadio from "./registry/Components/RadioButtons/SwitchRadio";
+import PaymentSelector from "./registry/Components/RadioButtons/PaymentSelector";
+import TabSelector from "./registry/Components/RadioButtons/TabSelector";
+import ValueTabSelector from "./registry/Components/RadioButtons/ValueTabSelector";
 
 // Lazy load components
 
@@ -20,6 +23,9 @@ const App4: React.FC = () => {
                 <Star />
                 <AnimatedStar/>
                 <SwitchRadio/>
+                <PaymentSelector/>
+                <TabSelector/>
+                <ValueTabSelector/>
             </Suspense>
         </ThemeProvider>
     );
