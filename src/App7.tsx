@@ -4,6 +4,9 @@ import { ThemeProvider } from "./lib/theme/ThemeContext"; // Adjust the path
 import SimpleForm from "./registry/Components/Forms/SimpleForm";
 import ToggleForm from "./registry/Components/Forms/ToggleForm";
 import GradientForm from "./registry/Components/Forms/GradientForm";
+import SpotLight from "./registry/Components/Forms/SpotLight";
+import BorderGradientForm from "./registry/Components/Forms/BorderGradientForm";
+import OTPForm from "./registry/Components/Forms/OTPForm";
 // Lazy load components
 
 const Navbar = lazy(() => import("./components/core/Navbar"));
@@ -16,6 +19,9 @@ const App: React.FC = () => {
                 {/* <SimpleForm /> */}
                 <ToggleForm />
                 <GradientForm/>
+                <SpotLight/>
+                <BorderGradientForm/>
+                <OTPForm/>
             </Suspense>
         </ThemeProvider>
     );
