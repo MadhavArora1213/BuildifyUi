@@ -7,6 +7,9 @@ import GradientForm from "./registry/Components/Forms/GradientForm";
 import SpotLight from "./registry/Components/Forms/SpotLight";
 import BorderGradientForm from "./registry/Components/Forms/BorderGradientForm";
 import OTPForm from "./registry/Components/Forms/OTPForm";
+import AnimatedFieldForm from "./registry/Components/Forms/AnimatedFieldForm";
+import GradientBorderForm from './registry/Components/Forms/GradientBorderForm';
+import HoverShadowForm from './registry/Components/Forms/HoverShadowForm'
 // Lazy load components
 
 const Navbar = lazy(() => import("./components/core/Navbar"));
@@ -22,6 +25,9 @@ const App: React.FC = () => {
                 <SpotLight/>
                 <BorderGradientForm/>
                 <OTPForm/>
+                <AnimatedFieldForm />
+                <GradientBorderForm />
+                <HoverShadowForm />
             </Suspense>
         </ThemeProvider>
     );
