@@ -19,7 +19,7 @@ const App: React.FC = () => {
             {/* Suspense to handle the loading state for lazy-loaded components */}
             <Suspense fallback={<div>Loading...</div>}>
                 <Navbar />
-                {/* <SimpleForm /> */}
+                <SimpleForm />
                 <ToggleForm />
                 <GradientForm/>
                 <SpotLight/>
