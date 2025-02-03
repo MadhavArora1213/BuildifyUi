@@ -10,7 +10,7 @@ import OTPForm from "./registry/Components/Forms/OTPForm";
 import AnimatedFieldForm from "./registry/Components/Forms/AnimatedFieldForm";
 import GradientBorderForm from './registry/Components/Forms/GradientBorderForm';
 import HoverShadowForm from './registry/Components/Forms/HoverShadowForm'
-// Lazy load components
+
 
 const Navbar = lazy(() => import("./components/core/Navbar"));
 const App: React.FC = () => {
