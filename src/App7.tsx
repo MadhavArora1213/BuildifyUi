@@ -10,6 +10,7 @@ import OTPForm from "./registry/Components/Forms/OTPForm";
 import AnimatedFieldForm from "./registry/Components/Forms/AnimatedFieldForm";
 import GradientBorderForm from './registry/Components/Forms/GradientBorderForm';
 import HoverShadowForm from './registry/Components/Forms/HoverShadowForm'
+import GoogleForm from "./registry/Components/Forms/GoogleForm";
 
 
 const Navbar = lazy(() => import("./components/core/Navbar"));
@@ -28,6 +29,7 @@ const App: React.FC = () => {
                 <AnimatedFieldForm />
                 <GradientBorderForm />
                 <HoverShadowForm />
+                <GoogleForm/>
             </Suspense>
         </ThemeProvider>
     );
